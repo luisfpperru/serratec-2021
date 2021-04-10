@@ -19,45 +19,46 @@ Lanche com Bacon e Tomate, sem molho.
 const ler = require("prompt-sync")();
 
 console.log(":Lanchonete:")
+console.log("Complementos: Digite Q= queijo, B= bacon, A= alface, T= tomate, P= picles ")
 
 //ENTRADA
-let complemento1 = ler("Qual complemento deseja no seu lanche? Digite Q= queijo, B= bacon, A= alface, T= tomate, P= picles: ");
-let complemento2 = ler("Qual outro complemento deseja no seu lanche? Digite Q= queijo, B= bacon, A= alface, T= tomate, P= picles: ");
-if (complemento1 == "A" || complemento1 == "T" || complemento2 == "A" || complemento2 == "T")
+let item1 = ler("Item 1: ");
+let item2 = ler("Item 2: ");
+if (item1 == "A" || item1 == "T" || item2 == "A" || item2 == "T")
     molho = ler("Adicionar molho? ");
 
 // PROCESSAMENTO
-let mensagem1 = "";
-let mensagem2 = "";
-let mensagem3 = "";
+let msg1 = "";
+let msg2 = "";
+let msg3 = "";
 
-if (complemento1 == "Q")
-    mensagem1 = "Queijo";
-if (complemento1 == "B")
-    mensagem1 = "Bacon";
-if (complemento1 == "A")
-    mensagem1 = "Alface";
-if (complemento1 == "T")
-    mensagem1 = "Tomate";
-if (complemento1 == "P")
-    mensagem1 = "Picles";
+if (item1 == "Q")
+    msg1 = "Queijo";
+if (item1 == "B")
+    msg1 = "Bacon";
+if (item1 == "A")
+    msg1 = "Alface";
+if (item1 == "T")
+    msg1 = "Tomate";
+if (item1 == "P")
+    msg1 = "Picles";
 
-if (complemento2 == "Q")
-    mensagem2 = "Queijo";
-if (complemento2 == "B")
-    mensagem2 = "Bacon";
-if (complemento2 == "A")
-    mensagem2 = "Alface";
-if (complemento2 == "T")
-    mensagem2 = "Tomate";
-if (complemento2 == "P")
-    mensagem2 = "Picles";
+if (item2 == "Q")
+    msg2 = "Queijo";
+if (item2 == "B")
+    msg2 = "Bacon";
+if (item2 == "A")
+    msg2 = "Alface";
+if (item2 == "T")
+    msg2 = "Tomate";
+if (item2 == "P")
+    msg2 = "Picles";
 
 if (molho = "Sim" || molho == "sim")
-    mensagem3 = " com molho ";
+    msg3 = " com molho ";
 if (molho = "Não" || molho == "não")
-    mensagem3 = " sem molho ";
+    msg3 = " sem molho ";
 
 //SAIDA
 console.log("[Cozinha]");
-console.log("Lanche com " + mensagem1 + " e "+ mensagem2 + ","+ mensagem3 +".");
+console.log("Lanche com " + msg1 + " e "+ msg2 + ","+ msg3 +".");
