@@ -1,0 +1,20 @@
+
+
+Proposta:
+ - Projeto de App que calcula chances de vitória de um time em um cenário de jogos de e-sports.
+
+ Restrições:
+  - Uma equipe de e-sports é uma Lista de 5 jogadores que jogam em 5 posições diferentes.
+  - Uma partida é composta por 2 equipes que podem se enfrentar em 2 lados assimétricos.
+  - O histórico de cada partida deve ser armazenado com algumas informações relevantes para o problema 
+  de forma a ser consultado futuramente. 
+  Exemplo: Farm por minuto, Abates por minuto, Dano por minuto, Placar de visão por minuto, Objetivos por minuto.
+
+  - Algum critério deve ser usado pra avaliar qual equipe tem maiores chances de vitória.
+  Exemplo: MMR médio ou algum modelo que análise as estatísticas do histórico
+
+Aplicações:
+- Submeter um relatório que auxilie um usuário a tomar uma decisão de qual time será vencedor;
+- App que calcula chances de vitórias para um site de Apostas em tempo real;
+- Uma especie de Cartola que quantifica o valor de cada jogador em cada rodada;
+- Pode ser extendido para competições de Futebol com 11 jogadores.
