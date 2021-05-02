@@ -1,4 +1,4 @@
-package src.main.java.br.com.aslendasdezepa.simulacao.models.equipe;
+package models.equipe;
 import models.jogador.Jogador;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -6,6 +6,11 @@ import java.util.InputMismatchException;
 public class Equipe {
     String nome;
     ArrayList<Jogador> membros;
+
+    public Equipe(String nome){
+        this.nome = nome;
+        this.membros = new ArrayList<Jogador>();
+    }
 
     public Equipe(String nome,ArrayList<Jogador> membros){
         this.nome = nome;
@@ -26,14 +31,23 @@ public class Equipe {
     }
 
 
-    public void AdicionarJogador(Jogador jogador){
+    public void adicionarJogador(Jogador jogador){
         if (this.membros.size() < 5)
             for (Jogador jogador1 : membros){
-                if (jogador1.posicao == jogador.posicao)
-                throw new NullPointerException("Não pode haver 2 jogadores na mesma posição.");
+                if (jogador1.getPosicao() == jogador.getPosicao())
+                throw new NullPointerException("Nao pode haver 2 jogadores na mesma posicao.");
             }
         else
-                throw new NullPointerException("Não pode haver mais de 5 jogadores numa equipe.");
+                throw new NullPointerException("Nao pode haver mais de 5 jogadores numa equipe.");
         this.membros.add(jogador);
     }
+
+    public double calcularMediaRanking(){
+        var soma = 0.0;
+        for (Jogador jogador:membros){
+            soma += jogador.getRanking();
+        }
+        return soma/membros.size();
+    }
+
 }

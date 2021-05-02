@@ -1,4 +1,4 @@
-package src.main.java.br.com.aslendasdezepa.simulacao.models.jogador;
+package models.jogador;
 
 public enum PosicaoJogador {
     TANK("Tank"),        

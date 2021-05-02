@@ -1,10 +1,9 @@
-package src.main.java.br.com.aslendasdezepa.simulacao.models.jogador;
+package models.jogador;
 
 public class Jogador {
     String nick;
     PosicaoJogador posicao;
     Integer ranking; // quantificar a experiencia do jogador
-    String personagem;
 
     public Jogador(String nick, PosicaoJogador posicao,Integer ranking){
         this.nick = nick;
@@ -34,14 +33,6 @@ public class Jogador {
 
     public void setRanking(Integer ranking){
         this.ranking = ranking;
-    }
-
-    public String getPersonagem(){
-        return this.personagem;
-    }
-
-    public void setPersonagem(String personagem){
-        this.personagem = personagem;
     }
 
 }
