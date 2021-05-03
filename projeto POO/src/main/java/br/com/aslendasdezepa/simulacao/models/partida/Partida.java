@@ -1,18 +1,22 @@
 package models.partida;
 import java.util.ArrayList;
 import models.equipe.Equipe;
+import java.util.Random;
 
 public class Partida {
     Integer id;
     Equipe equipeLadoVermelho;
     Equipe equipeLadoAzul;
-    Integer duracao;
-    //jogador.tipo = TipoJogador.TANK;
+    double chancesLadoVermelho;
+    double chancesLadoAzul;
+    LadoEquipe resultado; // Variável guarda se a Equipe Vermelha venceu ou não.
+
 
     public Partida(Integer id,Equipe equipeLadoVermelho, Equipe equipeLadoAzul){
         this.id = id;
         this.equipeLadoVermelho = equipeLadoVermelho;
         this.equipeLadoAzul = equipeLadoAzul;
+
     }
 
     public Integer getId(){
@@ -39,23 +43,44 @@ public class Partida {
         this.equipeLadoAzul = equipeLadoAzul;
     }
 
-    public Integer getDuracao(){
-        return this.duracao;
+    public double getChancesLadoVermelho(){
+        return this.chancesLadoVermelho;
     }
 
-    public void setDuracao(Integer duracao){
-        this.duracao = duracao;
+    public double getChancesLadoAzul(){
+        return this.chancesLadoAzul;
+    }
+
+    public LadoEquipe getResultado(){
+        return this.resultado;
     }
 
     public String escolherEquipeFavorita(){
-        var mmrVermelho = this.equipeLadoVermelho.calcularMediaRanking();
-        var mmrAzul = this.equipeLadoAzul.calcularMediaRanking();
-        if (mmrVermelho > mmrAzul){
-            return "Equipe favorita a ganhar: " + this.equipeLadoVermelho.getNome();
-        }else if (mmrVermelho < mmrAzul){
-            return "Equipe favorita a ganhar: " + this.equipeLadoAzul.getNome();
+        var rankingMedioVermelho = this.equipeLadoVermelho.calcularMediaRanking();
+        var rankingMedioAzul = this.equipeLadoAzul.calcularMediaRanking();
+        if (rankingMedioVermelho > rankingMedioAzul){
+            this.chancesLadoVermelho = 2.0;
+            this.chancesLadoAzul = 5.0;
+            return " As chances pra equipe "+ this.getEquipeLadoVermelho().getNome() + " sao: " + this.getChancesLadoVermelho() + " \n As chances pra equipe " + this.getEquipeLadoAzul().getNome() + " sao: " + this.getChancesLadoAzul();
+        }else if (rankingMedioVermelho < rankingMedioAzul){
+            this.chancesLadoVermelho = 5.0;
+            this.chancesLadoAzul = 2.0;
+            return " As chances pra equipe "+ this.getEquipeLadoVermelho().getNome() + " sao: " + this.getChancesLadoVermelho() + " \n As chances pra equipe " + this.getEquipeLadoAzul().getNome() + " sao: " + this.getChancesLadoAzul();
         }else{
-            return "Não existe equipe favorita.";
+            this.chancesLadoVermelho = 2.0;
+            this.chancesLadoAzul = 2.0;
+            return " As chances pra equipe "+ this.getEquipeLadoVermelho().getNome() + " sao: " + this.getChancesLadoVermelho() + " \n As chances pra equipe " + this.getEquipeLadoAzul().getNome() + " sao: " + this.getChancesLadoAzul();
+        }
+
+    }
+
+    public void simularResultado(){
+        var random = new Random();
+        int valor = random.nextInt(2);
+        if (valor == 0){
+            this.resultado = LadoEquipe.VERMELHO;
+        }else{
+            this.resultado = LadoEquipe.AZUL;
         }
     }
 }

@@ -30,7 +30,6 @@ public class Equipe {
         this.membros = membros;
     }
 
-
     public void adicionarJogador(Jogador jogador){
         if (this.membros.size() < 5)
             for (Jogador jogador1 : membros){
