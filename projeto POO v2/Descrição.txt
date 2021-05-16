@@ -1,0 +1,46 @@
+
+
+Proposta:
+ - Projeto de App que calcula chances de vitória de um time em um cenário de jogos de e-sports.
+
+ Restrições:
+  - Uma equipe de e-sports é uma Lista de 5 jogadores que jogam em 5 posições diferentes.
+  - Uma partida é composta por 2 equipes que podem se enfrentar em 2 lados assimétricos.
+  - O histórico de cada partida deve ser armazenado com algumas informações relevantes para o problema 
+  de forma a ser consultado futuramente. 
+  Exemplo: Ouro por minuto, Abates por minuto, Dano por minuto, Placar de visão por minuto, Objetivos por minuto.
+
+  - Algum critério deve ser usado pra avaliar qual equipe tem maiores chances de vitória.
+  Exemplo: MMR médio ou algum modelo que análise as estatísticas do histórico
+
+Aplicações:
+- Submeter um relatório que auxilie um usuário a tomar uma decisão de qual time será vencedor;
+- App que calcula chances de vitórias para um site de Apostas em tempo real;
+- Uma especie de Cartola que quantifica o valor de cada jogador em cada rodada;
+- Pode ser extendido para competições de Futebol com 11 jogadores ou outros jogos.
+
+
+PROBLEMA 1 (Fácil): Encontrar o ranking (atributo individual do Jogador) médio de uma Equipe a seguir comparar
+com a da Equipe adversária para saber quem é o provável vencedor. 
+OBS: Esse sistema é usado para pareamento de equipes (matchmaking) e o cálculo da pontuação ganha ou perdida em uma partida oficial. 
+Em caso de vitória a equipe "mais forte" ganha menos pontos se vencer de uma equipe "mais fraca" por não ser considerada favorita. 
+Em caso de derrota a equipe mais forte perde mais pontos enquanto a mais fraca ganha mais pontos e assim por diante.
+
+Uma forma de resolver esse problema seria colocar um método dentro de Equipe que faz a média do Ranking dos Jogadores
+que a compõe.
+Dentro da classe Partida poderiamos ter um método que acessa e compara os dois valores de Ranking Médio 
+e retorna a Equipe Favorita.
+
+
+PROBLEMA 2(Médio): Encontrar o desempenho atual de um jogador com base nos seu histórico de estatísticas ( No LOL seria 
+Ouro por minuto, Xp por min, Objetivos por min, Dano por Min, Placar de visão por min, etc.), um valor de 0 a 1 que indique
+qual momento da carreira o Jogador está: 1 seria o auge, por exemplo, e 0 o pior momento da carreira. 
+ 
+ BONUS: Comparar o desempenho individual e as estatísticas do Jogador com outros da mesma função. 
+ Os valores das estatísticas podem ter pesos diferentes pra cada função. 
+ Pra um Atirador , Ouro ou Dano por minuto pode ser mais importante; pra um Selva, Objetivos por Minuto pode ser mais importante; pro Suporte, 
+ Placar de visão pode ser a estatística mais relevante.
+ A aplicação desses valores gerados seriam quantificar o "valor de mercado" dos Jogadores baseado no seu rendimento na temporada atual
+
+ git clone https://github.com/luisfpperru/serratec-2021.git --branch master
+ git pull origin master
