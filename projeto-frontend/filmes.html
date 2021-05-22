@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Cinema</title>
+    <link rel="sortcut icon" href="img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style type="text/css">
+        .hidden {
+            display: none;
+        }
+        input {
+            display:block;
+        }
+    </style>
+
+    <script>
+        function mostrar(id) {
+            if(document.getElementById(id).style.display == 'block'){
+                document.getElementById(id).style.display = 'none';
+            }else {document.getElementById(id).style.display = 'block'}
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <ul class="nav nav-tabs">
+        <li role="presentation"><a href="home.html">Home</a></li>
+        <li role="presentation" class="active"><a href="filmes.html"> Filmes </a></li>
+        <li role="presentation"><a href="quemsomos.html"> Sobre nós </a></li>
+        <li role="presentation"><a href="contato.html"> Atendimento </a></li>
+    </ul>
+
+    <h1> Catálogo: </h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-2">
+                <img src="img/filme1.png" width="122%" height="122%">
+
+                <input type="button" value="Sinopse" onClick="mostrar('sinopse1')" />
+                <div id="sinopse1" class="hidden">
+                    <p style="color:grey">
+                    Sinopse 1: HAHAHHAHAHAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <img src="img/filme2.png" width="122%" height="122%">
+            </div>
+            <div class="col-sm-2">
+                <img src="img/filme3.png" width="122%" height="122%">
+            </div>
+            <div class="col-sm-2">
+                <img src="img/filme4.png" width="122%" height="122%">
+            </div>
+            <div class="col-sm-2">
+                <img src="img/filme5.png" width="122%" height="122%">
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- <iframe width="420" height="315"
+    src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1">
+    </iframe> -->
+
+    <!-- <style>
+    div {
+        background-color: yellow;
+        padding: 20px;
+        display: none;
+      }
+        
+      span:hover + div {
+        display: block;
+      }
+      </style>
+      </head>
+      <body>
+      
+      <span>Hover over me!</span>
+      <div>I will show on hover</div> -->
+
+      <!-- <script src="js/codigos.js"> </script>  -->
+
+
+
+</body>
+
+</html>
