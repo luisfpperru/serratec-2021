@@ -18,8 +18,14 @@ function exibirSinopse(id) {
 // }
 
 function exibirMensagem() {
-  if (document.getElementById('name').value !== "" && document.getElementById('email').value !== "" && document.getElementById('cpf').value !== "") {
+  
+  if (document.querySelectorAll('input:invalid').length == 0){
     document.querySelectorAll('input').forEach(x => x.value = ''); // limpa todos os campos
     alert("Sua nota fiscal foi enviada com sucesso!"); // exibe o alerta
   }
+
+  // if (document.getElementById('name').value !== "" && document.getElementById('email').value !== "" && document.getElementById('cpf').value !== "") {
+  //   document.querySelectorAll('input').forEach(x => x.value = ''); // limpa todos os campos
+  //   alert("Sua nota fiscal foi enviada com sucesso!"); // exibe o alerta
+  // }
 }
