@@ -9,8 +9,6 @@
     <link rel="sortcut icon" href="img/logo.png" type="image/png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/estilo.css">
     <script src="js/codigos.js"> </script>
 </head>
@@ -29,10 +27,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <a href="formulario.html">
-                    <img src="img/filme1.png" width="120%">
-                </a>
+            <div class="col-sm-2">
+                <img class="image" src="img/filme1.png" width="120%">
+                <div class="middle">
+                    <div class="text"> <a href="formulario.html"> <span class="fa fa-cart-plus fa-3x"></span> </a> <img
+                            src="img/R$.png" width="20%">
+                        <preco>29,99</preco>
+                    </div>
+                </div>
+
                 <input id="button-sinopse1" type="button" value="Sinopse" onclick="exibirSinopse('sinopse1')">
                 <div id="sinopse1" class="oculto">
                     Uma história heroica e emocionante sobre bombeiros e equipes de resgate.
@@ -44,10 +47,14 @@
                     <button type="button"> Trailer </button>
                 </a>
             </div>
-            <div class="col-sm-4">
-                <a href="formulario.html">
-                    <img src="img/filme2.png" width="120%">
-                </a>
+            <div class="col-sm-2">
+                <img src="img/filme2.png" width="120%">
+                <div class="middle">
+                    <div class="text"> <a href="formulario.html"> <span class="fa fa-cart-plus fa-3x"></span> </a> <img
+                            src="img/R$.png" width="20%">
+                        <preco>29,99</preco>
+                    </div>
+                </div>
                 <input id="button-sinopse2" type="button" value="Sinopse" onclick="exibirSinopse('sinopse2')">
                 <div id="sinopse2" class="oculto">
                     Em Demon Slayer - Mugen Train, durante o período Taisho no Japão, o jovem Tanjiro volta para
@@ -59,41 +66,65 @@
                     <button type="button"> Trailer </button>
                 </a>
             </div>
-            <div class="col-sm-4">
-                <a href="formulario.html">
-                    <img src="img/filme3.png" width="120%">
-                </a>
-                <div class="oculto">
-                    Kong e seus protetores embarcam em uma jornada perigosa para encontrar seu verdadeiro lar. Jia, uma
-                    garota órfã que tem um vínculo único e poderoso com a poderosa besta, acompanha a aventura. No
-                    entanto, eles logo se encontram no caminho de Godzilla, completamente enfurecido, deixando um rastro
-                    de destruição em todo o mundo. O confronto inicial entre os dois titãs, instigado por forças
-                    misteriosas, é apenas o começo do enigma que reside nas profundezas do planeta.
+            <div class="col-sm-2">
+                <img src="img/filme3.png" width="120%">
+                <div class="middle">
+                    <div class="text"> <a href="formulario.html"> <span class="fa fa-cart-plus fa-3x"></span> </a> <img
+                            src="img/R$.png" width="20%">
+                        <preco>49,99</preco>
+                    </div>
                 </div>
+                <input id="button-sinopse3" type="button" value="Sinopse" onclick="exibirSinopse('sinopse3')">
+                <div id="sinopse3" class="oculto">
+                    No primeiro crossover do MonstroVerso, Kong e seus protetores embarcam em uma jornada perigosa para
+                    encontrar seu verdadeiro lar. Entretanto, tudo sai do controle quando um Godzilla enfurecido, começa
+                    a deixar um rastro de destruição pelo planeta. Esse combate épico entre os dois titãs, instigado por
+                    forças ocultas, é apenas o começo do mistério que jaz no núcleo da Terra. Será que o mundo
+                    sobreviverá ao duelo de monstros?
+                </div>
+                <a href=https://www.youtube.com/watch?v=ur0rw-SaFmU target="_blank">
+                    <button type="button"> Trailer </button>
 
             </div>
-            <div class="col-sm-4">
-                <a href="formulario.html">
-                    <img src="img/filme4.png" width="120%">
-                </a>
-                <div class="oculto">
-                    Inteligente, criativa e determinada, Estella quer fazer um nome para si através de seus designs e
-                    acaba chamando a atenção da Baronesa Von Hellman. Entretanto, o relacionamento delas desencadeia um
-                    curso de eventos e revelações que fazem com que Estella abrace seu lado rebelde e se torne a
-                    Cruella, uma pessoa má, elegante e voltada para a vingança.
+            <div class="col-sm-2">
+                <img src="img/filme4.png" width="120%">
+                <div class="middle">
+                    <div class="text">
+                        <a href="formulario.html"> <span class="fa fa-cart-plus fa-3x"></span> </a>
+                        <img src="img/R$.png" width="20%">
+                        <preco>49,99 </preco >
+                    </div>
                 </div>
+                <input id="button-sinopse4" type="button" value="Sinopse" onclick="exibirSinopse('sinopse4')">
+                <div id="sinopse4" class="oculto">
+                    Ambientado na Londres dos anos 70 em meio à revolução do punk rock, o filme da Disney mostra a
+                    história de uma jovem vigarista chamada Estella (Emma Stone). Inteligente, criativa e determinada a
+                    fazer um nome para si através de seus designs, ela acaba chamando a atenção da Baronesa Von Hellman
+                    (Emma Thompson), uma lenda fashion que é devastadoramente chique e assustadora.
+                </div>
+                <a href=https://www.youtube.com/watch?v=ImP5iJE1B7M target="_blank">
+                    <button type="button"> Trailer </button>
+
             </div>
-            <div class="col-sm-4">
-                <a href="formulario.html">
-                    <img src="img/filme5.png" width="120%">
-                </a>
-                <div class="oculto">
-                    A Ordem do Demônio revela uma história assustadora de terror, assassinato e um desconhecido mal que
-                    chocou até os experientes investigadores de atividades paranormais Ed e Lorraine Warren. Um dos
-                    casos mais sensacionais de seus arquivos, começa com uma luta pela alma de um garoto, depois os leva
-                    para além de tudo o que já haviam visto antes, para marcar a primeira vez na história dos Estados
-                    Unidos que um suspeito de assassinato alega ter tido uma possessão demoníaca como defesa.
+            <div class="col-sm-2">
+                <img src="img/filme5.png" width="120%">
+                <div class="middle">
+                    <div class="text"> <a href="formulario.html"> <span class="fa fa-cart-plus fa-3x"></span> </a> <img
+                            src="img/R$.png" width="20%">
+                        <preco>31,99</preco>
+                    </div>
                 </div>
+                <input id="button-sinopse5" type="button" value="Sinopse" onclick="exibirSinopse('sinopse5')">
+                <div id="sinopse5" class="oculto">
+                    Invocação do Mal 3: A Ordem do Demônio revela uma história assustadora de terror, assassinato e um
+                    desconhecido mal que chocou até os experientes investigadores de atividades paranormais Ed (Patrick
+                    Wilson) e Lorraine Warren (Vera Farmiga). Um dos casos mais sensacionais de seus arquivos, começa
+                    com uma luta pela alma de um garoto, depois os leva para além de tudo o que já haviam visto antes,
+                    para marcar a primeira vez na história dos Estados Unidos que um suspeito de assassinato alega ter
+                    tido uma possessão demoníaca como defesa.
+                </div>
+                <a href=https://www.youtube.com/watch?v=Hn8GsjQTUiM target="_blank">
+                    <button type="button"> Trailer </button>
             </div>
         </div>
     </div>

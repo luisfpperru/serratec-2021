@@ -50,12 +50,13 @@ h2{
 }
 
 h3{
-    margin: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: medium;
     text-indent: 15px;
     text-align: center;
     padding: 10px;
-    color: red;
+    color: white;
 }
 
 
@@ -98,7 +99,9 @@ li a{
 }
 
 .container{
-    padding: 30px;
+    padding: 10px;
+  
+    
 }
 
 input:invalid {
@@ -115,3 +118,17 @@ input:valid {
     padding-top: 10px;
     color: red;
 }
+destaque{
+    font-size: xx-large;
+    color: red;
+    padding-left:100px;
+    font-family: Calibri;
+    image-resolution: 20px;
+    
+}
+
+preco{
+    color:white; 
+    font-size: larger;
+}
+

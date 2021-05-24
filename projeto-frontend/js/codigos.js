@@ -1,12 +1,10 @@
 function exibirSinopse(id) {
-  if (document.getElementById(id).style.display === "block"){
+  if (document.getElementById(id).style.display === "block") {
     document.getElementById(id).style.display = "none";
-    document.getElementById("button-"+id).value = "Sinopse"
-  }
-    
-  else{
+    document.getElementById("button-" + id).value = "Sinopse"
+  } else {
     document.getElementById(id).style.display = "block";
-    document.getElementById("button-"+id).value = "Ocultar"
+    document.getElementById("button-" + id).value = "Ocultar"
   }
 }
 
@@ -20,8 +18,8 @@ function exibirSinopse(id) {
 // }
 
 function exibirMensagem() {
-    // if (document.getElementById('nome').classList.contains("input:invalid") || document.getElementById('email').classList.contains("input:invalid") || document.getElementById('cpf').classList.contains("input:invalid"))
-      document.querySelectorAll('input').forEach(x => x.value = '');
-    // else
-      alert("Sua nota fiscal foi enviada com sucesso!");
+  if (document.getElementById('name').value !== "" && document.getElementById('email').value !== "" && document.getElementById('cpf').value !== "") {
+    document.querySelectorAll('input').forEach(x => x.value = ''); // limpa todos os campos
+    alert("Sua nota fiscal foi enviada com sucesso!"); // exibe o alerta
+  }
 }
