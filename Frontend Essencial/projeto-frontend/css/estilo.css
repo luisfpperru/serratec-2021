@@ -1,0 +1,135 @@
+body{
+    margin-right: auto;
+    background-color: black;
+}
+
+#myCarousel{
+   width: 30%;
+   height: 30%;
+   margin: auto;
+   /* align-content: center; */
+}
+
+.carousel-inner{
+    width:100%;
+    /* max-height: 300px !important; */
+  }
+
+/* .carousel-inner .item{
+    width:40%;
+    height: 40px;
+} */
+
+p{
+    text-indent: 15px;
+    padding:30px;
+    text-align: center;
+    color: white;
+}
+
+.item{
+    background-color: black;
+}
+#membros{
+    text-align: left;
+}
+
+h1{
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Calibri;
+    color: red
+}
+
+h2{
+    margin: auto;
+    font-size: small;
+    text-indent: 15px;
+    text-align: left;
+    padding: 10px;
+    color: red;
+}
+
+h3{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: medium;
+    text-indent: 15px;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+
+hr{
+    border-top: 2px solid black;
+}
+
+.oculto {
+    padding: 20px;
+    display: none;
+    /* height: 100px; 
+    width: 400px; */
+    color: red;
+    background-color: #2e2e2e;
+  }
+    
+img:hover + .oculto{
+    display: block;
+    font-size: small;
+    text-align: center;
+}
+
+.classeComErro{
+    border-color: brown;
+}
+
+.nav-tabs{
+    background-color: red;
+    font-size: x-large;
+    font-family: Calibri;
+    /* font-style: bold; */
+}
+
+.nav-tabs:hover{
+    color:red
+}
+
+li a{
+    color:black;
+}
+
+.container{
+    padding: 10px;
+  
+    
+}
+
+input:invalid {
+    border: 2px solid red;
+  }
+  
+input:valid {
+    border: 2px solid black;
+  }
+
+.form-group{
+    font-size: x-large;
+    padding-left: 15px;
+    padding-top: 10px;
+    color: red;
+}
+destaque{
+    font-size: xx-large;
+    color: red;
+    padding-left:100px;
+    font-family: Calibri;
+    image-resolution: 20px;
+    
+}
+
+preco{
+    color:white; 
+    font-size: larger;
+}
+

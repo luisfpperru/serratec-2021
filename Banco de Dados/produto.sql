@@ -1,4 +1,3 @@
-DROP TABLE public.produto;
 CREATE TABLE public.produto
 (
     codigo character varying(5) NOT NULL,
